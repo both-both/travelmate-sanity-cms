@@ -7,17 +7,9 @@ export const city = defineType({
 
   fields: [
     defineField({
-      name: 'name',
-      title: 'By',
-      type: 'localizedString',
-      validation: (rule) => rule.required(),
-    }),
-
-    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {source: 'name.en'},
       validation: (rule) => rule.required(),
     }),
 
@@ -30,12 +22,6 @@ export const city = defineType({
     }),
 
     defineField({
-      name: 'description',
-      title: 'Beskrivelse',
-      type: 'localizedText',
-    }),
-
-    defineField({
       name: 'image',
       title: 'Billede',
       type: 'image',
@@ -43,6 +29,6 @@ export const city = defineType({
     }),
   ],
   preview: {
-    select: {title: 'name.da', subtitle: 'country.name.da', media: 'image'},
+    select: {title: 'slug.current', media: 'image'},
   },
 })

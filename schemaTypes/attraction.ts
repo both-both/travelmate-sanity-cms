@@ -7,17 +7,9 @@ export const attraction = defineType({
 
   fields: [
     defineField({
-      name: 'name',
-      title: 'Seværdighed',
-      type: 'localizedString',
-      validation: (rule) => rule.required(),
-    }),
-
-    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {source: 'name.en'},
       validation: (rule) => rule.required(),
     }),
 
@@ -27,12 +19,6 @@ export const attraction = defineType({
       type: 'reference',
       to: [{type: 'city'}],
       validation: (rule) => rule.required(),
-    }),
-
-    defineField({
-      name: 'description',
-      title: 'Beskrivelse',
-      type: 'localizedText',
     }),
 
     defineField({
@@ -58,6 +44,6 @@ export const attraction = defineType({
     }),
   ],
   preview: {
-    select: {title: 'name.da', subtitle: 'address', media: 'image'},
+    select: {title: 'slug.current', subtitle: 'address', media: 'image'},
   },
 })

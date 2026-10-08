@@ -7,13 +7,6 @@ export const country = defineType({
 
   fields: [
     defineField({
-      name: 'name',
-      title: 'Land',
-      type: 'localizedString',
-      validation: (rule) => rule.required(),
-    }),
-
-    defineField({
       name: 'code',
       title: 'Landekode',
       type: 'string',
@@ -25,14 +18,7 @@ export const country = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {source: 'name.en'},
       validation: (rule) => rule.required(),
-    }),
-
-    defineField({
-      name: 'description',
-      title: 'Beskrivelse',
-      type: 'localizedText',
     }),
 
     defineField({
@@ -44,6 +30,6 @@ export const country = defineType({
   ],
 
   preview: {
-    select: {title: 'name.da', subtitle: 'code', media: 'image'},
+    select: {title: 'slug.current', subtitle: 'code', media: 'image'},
   },
 })

@@ -5,6 +5,10 @@ import {localizedText} from './localizedText'
 import {country} from './country'
 import {city} from './city'
 import {attraction} from './attraction'
+import {language} from './language'
+import {countryInfo} from './countryInfo'
+import {attractionInfo} from './attractionInfo'
+import {cityInfo} from './cityInfo'
 
 export const schemaTypes = [
   article,
@@ -14,4 +18,8 @@ export const schemaTypes = [
   country,
   city,
   attraction,
+  language,
+  countryInfo,
+  cityInfo,
+  attractionInfo,
 ]
