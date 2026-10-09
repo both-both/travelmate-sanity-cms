@@ -7,8 +7,10 @@ import {language} from './language'
 import {countryInfo} from './countryInfo'
 import {attractionInfo} from './attractionInfo'
 import {cityInfo} from './cityInfo'
+import {uiText} from './uiText'
 
 export const schemaTypes = [
+  uiText,
   article,
   user,
   country,
